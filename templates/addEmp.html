@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+<!-- {% load static %} -->
+{% block content %}
+    {% include 'messages.html' %}
+    <div class="container">
+        <h3>Employee Form</h3>
+        <form action="" class="emp-form" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit"
+                   class="btn btn-success"
+                   name="submit"
+                   value="Save Employee">
+        </form>
+    </div>
+{% endblock content %}
